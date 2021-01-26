@@ -1,30 +1,35 @@
 import React from "react";
 
-// phone, firstname, lastname, email
 
-function TableData(props) {
-    console.log(props)
+function TableData({ users }) {
     return (
-    <tbody> 
-        {/* {this.state.user
-
-        .map((users) => ( */}
-        <tr>
-            <td>
-                {/* {users.name.first} */}
-            </td>
-            <td>
-                {/* {props.users.name.last} */}
-            </td>
-            <td>
-                {/* {props.users.name.first} */}
-            </td>
-            <td>
-                {/* {props.users.name.last} */}
-            </td>
-        </tr>
-        {/* ))}  */}
-    </tbody>
+        <tbody>
+            { users[0] !== undefined && users[0].name !== undefined ? (
+                users.map(({ name, login, phone, email, gender }) => {
+                    return (
+                        <tr key={login.uuid}>
+                            <td >
+                                {name.first}
+                            </td>
+                            <td>
+                               {name.last}
+                            </td>
+                            <td>
+                                {phone}
+                            </td>
+                            <td>
+                                {email}
+                            </td>
+                            <td>
+                                {gender}
+                            </td>
+                        </tr>
+                    )
+                })
+            ) : (
+                    <></>
+                )}
+        </tbody>
     )
 }
 

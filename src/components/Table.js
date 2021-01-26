@@ -95,16 +95,6 @@ class Table extends Component {
     };
 
 
-    // componentDidMount() {
-    //     API.getUsers().then(res => this.setState({
-    //         users: res.data.results,
-    //         filterUser: res.data.results
-    //     })).catch(err => console.log(err));
-    // }
-
-    //does this work with two .then() ???
-//.then(res => console.log(res))
-
     componentDidMount() {
         API.getUsers().then(res => this.setState({
             users: res.data.results,
@@ -130,19 +120,16 @@ class Table extends Component {
         this.setState({ filterUser: filteredList, error: "" })
     };
 
-    //sort function
-    // handleFormSubmit = event => {
-    //     event.preventDefault();
-    //     this.searchUsers(this.state.search);
-    // };
-
+   // sort function
+   
+//
 
     render() {
         console.log(this.state)
         return (
             <div>
                 <SearchBox handleSearchChange = {this.handleSearchChange} />
-                <TableHeader users={this.state.filterUser}/>
+                <TableHeader users={this.state.filterUser} />
                     {/* passing in users and sort funtion */}
                     {/* </TableHeader>
                 <SearchBox handleSearchChange = {this.handleSearchChange}></SearchBox> */}
