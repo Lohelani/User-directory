@@ -1,9 +1,13 @@
 import React from "react";
 //import "./Header.css";
 import "../index"
+import TableData from "./TableData";
 
-function TableHeader () {
+function TableHeader ({users}) {
+    console.log(users)
     return (
+        
+        <table>
         <thead>
         <tr>
           <th>Phone #</th>
@@ -12,6 +16,8 @@ function TableHeader () {
           <th>Email</th>
         </tr>
       </thead>
+      <TableData users={users}/>
+</table>
     )
 }
 

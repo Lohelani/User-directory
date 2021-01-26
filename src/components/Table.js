@@ -85,16 +85,13 @@ import API from "../utils/API";
 import TableHeader from "./TableHeader";
 //import API from "../utils/API";
 //import TableData from "../TableData";
-//import SearchBox from "../SearchBox";
+import SearchBox from "./SearchBox";
 
 class Table extends Component {
-    state = {
-        result: {
+    state = {  
             users: [{}],
             filterUser: [{}],
             order: "descend"
-        },
-        search: ""
     };
 
 
@@ -106,8 +103,10 @@ class Table extends Component {
     // }
 
     //does this work with two .then() ???
+//.then(res => console.log(res))
+
     componentDidMount() {
-        API.getUsers().then(res => console.log(res)).then(res => this.setState({
+        API.getUsers().then(res => this.setState({
             users: res.data.results,
             filterUser: res.data.results
         })).catch(err => console.log(err));
@@ -132,24 +131,25 @@ class Table extends Component {
     };
 
     //sort function
-    handleFormSubmit = event => {
-        event.preventDefault();
-        this.searchUsers(this.state.search);
-    };
+    // handleFormSubmit = event => {
+    //     event.preventDefault();
+    //     this.searchUsers(this.state.search);
+    // };
 
 
     render() {
         console.log(this.state)
         return (
             <div>
-                <TableHeader style={{ minHeight: "80%" }}>
+                <SearchBox handleSearchChange = {this.handleSearchChange} />
+                <TableHeader users={this.state.filterUser}/>
                     {/* passing in users and sort funtion */}
                     {/* </TableHeader>
                 <SearchBox handleSearchChange = {this.handleSearchChange}></SearchBox> */}
                     {/* <TableData results={this.state.results}>
 
                 </TableData>  */}
-                </TableHeader>
+            
 
                 {/* <SearchBox value={this.state.search}
                     handleSearchChange={this.handleSearchChange}
