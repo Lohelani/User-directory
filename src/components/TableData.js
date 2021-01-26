@@ -1,27 +1,29 @@
 import React from "react";
 
+// phone, firstname, lastname, email
 
 function TableData(props) {
     console.log(props)
     return (
     <tbody> 
-        {/* //map through table row */}
+        {/* {this.state.user
+
+        .map((users) => ( */}
         <tr>
             <td>
-                {/* {props.user.name.first} */}
+                {/* {users.name.first} */}
             </td>
             <td>
-                {/* {props.user.name.last} */}
+                {/* {props.users.name.last} */}
             </td>
             <td>
-                {/* {props.user.name.first} */}
+                {/* {props.users.name.first} */}
             </td>
             <td>
-                {/* {props.user.name.last} */}
+                {/* {props.users.name.last} */}
             </td>
-
-
         </tr>
+        {/* ))}  */}
     </tbody>
     )
 }

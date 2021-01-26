@@ -36,7 +36,7 @@
 //                             .map((user) => (
 //                                 <tr key={user.name}>
 //                                     <td>
-//                                         <img src={user.picture.thumbnail} alt="" />
+//                                         <img src={user.picture.medium} alt="" />
 //                                     </td>
 //                                     <td>
 //                                         {user.name.first} {user.name.last}
