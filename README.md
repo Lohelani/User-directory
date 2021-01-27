@@ -1,6 +1,6 @@
 # Empoyee-User-Directory
 
-### _Created by: Lohelani Hicks
+### _Created by: Lohelani Hicks_
 
 
 ## Description and Method
