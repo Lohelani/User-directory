@@ -1,90 +1,6 @@
-// import React from "react";
-// import axios from "axios";
-// import { Component } from "react";
-// //import { render } from "react-dom";
-// //import API from "../../utils/API"
-
-
-
-// class Table extends Component {
-
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             users: [],
-
-//         }
-//     }
-
-//     componentDidMount() {
-//         axios.get("https://randomuser.me/api/?results=50&nat=us").then((res) => {
-//             this.setState({ users: res.data.results })
-//         })
-//     }
-
-
-//     render() {
-//         return (
-//             <table className="table table-striped">
-
-//                 {/* <input handleSearchChange={this.handleSearchChange}></input> */}
-//                 <tbody>
-//                     <thead>
-
-//                         {this.state.users
-
-//                             .map((user) => (
-//                                 <tr key={user.name}>
-//                                     <td>
-//                                         <img src={user.picture.medium} alt="" />
-//                                     </td>
-//                                     <td>
-//                                         {user.name.first} {user.name.last}
-//                                     </td>
-//                                     <td>
-//                                         {user.email}
-//                                     </td>
-//                                     <td>
-//                                         {user.phone}
-//                                     </td>
-//                                     <td>
-//                                         {user.location}
-//                                     </td>
-//                                 </tr>
-//                             ))
-//                         }
-
-//                     </thead></tbody>
-//             </table >
-//         )
-//     }
-
-// }
-
-
-// export default Table;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { Component } from "react";
 import API from "../utils/API";
 import TableHeader from "./TableHeader";
-//import API from "../utils/API";
-//import TableData from "../TableData";
 import SearchBox from "./SearchBox";
 
 class Table extends Component {
@@ -102,11 +18,6 @@ class Table extends Component {
         })).catch(err => console.log(err));
     };
 
-    // searchUsers = query => {
-    //     API.getUsers(query)
-    //         .then(res => this.setState({ result: res.data }))
-    //         .catch(err => console.log(err));
-    // };
 
     //inputChange is where we change state ie first name last name number
     handleSearchChange = event => {
@@ -120,33 +31,15 @@ class Table extends Component {
         this.setState({ filterUser: filteredList, error: "" })
     };
 
-   // sort function
-   
-//
-
     render() {
         console.log(this.state)
         return (
             <div>
                 <SearchBox handleSearchChange = {this.handleSearchChange} />
                 <TableHeader users={this.state.filterUser} />
-                    {/* passing in users and sort funtion */}
-                    {/* </TableHeader>
-                <SearchBox handleSearchChange = {this.handleSearchChange}></SearchBox> */}
-                    {/* <TableData results={this.state.results}>
-
-                </TableData>  */}
-            
-
-                {/* <SearchBox value={this.state.search}
-                    handleSearchChange={this.handleSearchChange}
-                    handleFormSubmit={this.handleFormSubmit} /> */}
-
             </div>
         )
     }
-
-
 }
 
 

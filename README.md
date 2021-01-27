@@ -12,9 +12,9 @@ For this application I used react to create an employee user page from an api pr
 * axios
 * GH pages
 
-# Heroku Link to Deployed Application:
+# GH Pages Link to Deployed Application:
 
-https://pacific-journey-14962.herokuapp.com/
+https://lohelani.github.io/User-directory/
 
  # Link to Github Repository:
 
