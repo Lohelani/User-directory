@@ -11,12 +11,11 @@ function TableHeader ({users}) {
         <table className="table table-striped">
         <thead>
         <tr>
-            {/* {column.map(header => <th>{header}</th>)} */}
-          
+           
           <th>First Name</th>
           <th>Last Name</th>
-          <th>Email</th>
           <th>Phone #</th>
+          <th>Email</th>
         </tr>
       </thead>
       <TableData users={users}/>
