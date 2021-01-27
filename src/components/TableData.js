@@ -5,7 +5,7 @@ function TableData({ users }) {
     return (
         <tbody>
             { users[0] !== undefined && users[0].name !== undefined ? (
-                users.map(({ name, login, phone, email, gender }) => {
+                users.map(({ name, login, phone, email}) => {
                     return (
                         <tr key={login.uuid}>
                             <td >
@@ -20,9 +20,7 @@ function TableData({ users }) {
                             <td>
                                 {email}
                             </td>
-                            <td>
-                                {gender}
-                            </td>
+                            
                         </tr>
                     )
                 })

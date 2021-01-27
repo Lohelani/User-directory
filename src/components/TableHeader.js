@@ -12,10 +12,11 @@ function TableHeader ({users}) {
         <thead>
         <tr>
             {/* {column.map(header => <th>{header}</th>)} */}
-          <th>Phone #</th>
+          
           <th>First Name</th>
           <th>Last Name</th>
           <th>Email</th>
+          <th>Phone #</th>
         </tr>
       </thead>
       <TableData users={users}/>
